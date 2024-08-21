@@ -1,0 +1,13 @@
+@mixin responsive($screen) {
+  @if $screen == 'M' {
+    @media screen and (width >= $md-breakpoints) {
+      @content;
+    }
+  }
+
+  @if $screen == 'L' {
+    @media screen and (width>=$lg-breakpoints) {
+      @content;
+    }
+  }
+}
