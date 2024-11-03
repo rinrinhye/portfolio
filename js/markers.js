@@ -8,5 +8,3 @@ export function markers() {
     });
   }
 }
-
-markers();

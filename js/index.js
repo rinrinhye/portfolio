@@ -6,6 +6,6 @@ import './section-project.js';
 import './flow-text.js';
 import './footer.js';
 import './match-media.js';
-import './markers.js';
+import { markers } from './markers.js';
 
 markers();
