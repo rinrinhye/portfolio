@@ -1,0 +1,124 @@
+.project-background {
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  //flow-animation
+  .text-line-wrap {
+    &.left {
+      .flow-wrap:not(.clone) {
+        // animation: flow-animation-left 120s linear infinite;
+      }
+
+      .flow-wrap.clone {
+        // animation: flow-animation-left-clone 120s linear infinite;
+      }
+    }
+
+    &.right {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+
+      .flow-wrap:not(.clone) {
+        // animation: flow-animation-right 120s linear infinite;
+      }
+
+      .flow-wrap.clone {
+        // animation: flow-animation-right-clone 120s linear infinite;
+      }
+    }
+  }
+
+  .text-line-wrap {
+    height: clamp(72px, 12vw, 150px);
+    overflow: hidden;
+
+    &:nth-child(2) {
+      .text {
+        letter-spacing: 0;
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+        text-stroke: 1px black;
+      }
+    }
+  }
+
+  .text-group {
+    display: flex;
+    height: clamp(72px, 12vw, 150px);
+  }
+
+  .flow-wrap {
+    display: flex;
+    padding-right: 40px;
+    white-space: nowrap;
+    gap: 40px;
+  }
+
+  .text {
+    font-size: clamp(72px, 12vw, 150px);
+    line-height: clamp(72px, 12vw, 150px);
+    letter-spacing: -10px;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes flow-animation-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-100%);
+  }
+
+  50.01% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flow-animation-left-clone {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes flow-animation-right-clone {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  50.01% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flow-animation-right {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}

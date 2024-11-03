@@ -1,0 +1,47 @@
+.profile-history {
+  .title {
+    margin-bottom: clamp(50px, 7vw, 100px);
+    font-family: 'Faktum';
+    font-size: clamp(20px, 7vw, 80px);
+    text-transform: capitalize;
+  }
+
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 24px);
+  }
+
+  .history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(6px, 2vw, 24px);
+
+    .year-group {
+      display: flex;
+      flex-shrink: 0;
+      font-family: 'NanumBarunGothic', sans-serif;
+      font-size: clamp(14px, 5.5vw, 48px);
+      text-align: center;
+
+      .year {
+        font: inherit;
+      }
+    }
+
+    .text {
+      align-self: center;
+      font-family: 'NanumBarunGothic', sans-serif;
+      font-size: clamp(14px, 3.6vw, 22px);
+      line-height: 1.3;
+      word-break: keep-all;
+
+      .char {
+        font-family: 'NanumBarunGothic', sans-serif;
+        font-size: clamp(14px, 3.6vw, 22px);
+        line-height: 1.3;
+        word-break: keep-all;
+      }
+    }
+  }
+}

@@ -1,8 +1,21 @@
 @import './constants/breakpoints';
-@import './constants/grids';
+@import './constants/colors';
 
+@import './base/fonts';
 @import './base/reset';
+@import './base/globals';
 
 @import './mixins/responsive';
 
-@import './layouts/grids';
+@import './layouts/section-visual';
+@import './layouts/section-profile';
+@import './layouts/section-project';
+@import './layouts/footer';
+
+@import './components/nav';
+@import './components/profile-intoduction';
+@import './components/profile-history';
+@import './components/profile-co-work';
+
+@import './components/project-background';
+@import './components/project';

@@ -1,0 +1,12 @@
+.section-project {
+  position: relative;
+  padding-bottom: 400px;
+
+  .project-contents {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 400px;
+  }
+}

@@ -1,0 +1,49 @@
+.section-visual {
+  width: 100vw;
+  height: 100vh;
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .visual-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .top {
+      position: relative;
+    }
+  }
+
+  .text-01 {
+    display: flex;
+    text-transform: uppercase;
+  }
+
+  .text-02 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+
+    .letter {
+      font-size: clamp(8px, 5vw, 90px);
+      font-weight: 700;
+    }
+  }
+
+  .text-03 {
+    display: flex;
+  }
+
+  .letter {
+    font-family: 'Editorial';
+    font-size: clamp(20px, 12vw, 200px);
+    text-transform: uppercase;
+  }
+}

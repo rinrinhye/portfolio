@@ -1,12 +1,24 @@
 @mixin responsive($screen) {
+  @if $screen == 'S' {
+    @media screen and (min-width: $sm-breakpoint) {
+      @content;
+    }
+  }
+
   @if $screen == 'M' {
-    @media screen and (width >= $md-breakpoints) {
+    @media screen and (min-width: $md-breakpoint) {
       @content;
     }
   }
 
   @if $screen == 'L' {
-    @media screen and (width>=$lg-breakpoints) {
+    @media screen and (min-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+
+  @if $screen == 'XL' {
+    @media screen and (min-width: $xl-breakpoint) {
       @content;
     }
   }
