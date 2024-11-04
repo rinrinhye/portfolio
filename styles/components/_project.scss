@@ -1,30 +1,37 @@
 .project {
-  width: clamp(200px, 75vw, 800px);
-  height: clamp(200px, 60vw, 600px);
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s, transform 0.3s;
 
   .wrap {
     position: relative;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
     height: 100%;
-    gap: 20px;
+    gap: 12px;
   }
 
   .skills-group {
-    position: absolute;
-    top: -32px;
-    left: 0;
     display: flex;
     flex-wrap: wrap-reverse;
     max-width: clamp(200px, 75vw, 800px);
     gap: 6px;
+  }
+
+  .image-group {
+    position: relative;
+    width: clamp(200px, 75vw, 800px);
+    height: clamp(200px, 60vw, 600px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   .skill {
@@ -39,10 +46,8 @@
   }
 
   .link-group {
-    position: absolute;
-    right: 0;
-    bottom: -50px;
     display: flex;
+    align-self: flex-end;
 
     .link {
       padding: 10px 20px;
@@ -55,36 +60,46 @@
 
   // 각 프로젝트
 
+  &.project-harim {
+    .image-group {
+      background-color: $harim-red;
+
+      img {
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+
   &.project-ohou {
-    background-image: url('assets/images/img_ohou.jpg');
-    background-size: cover;
+    .image-group img {
+      object-fit: cover;
+    }
   }
 
   &.project-kakao {
-    background-image: url('assets/images/img_kakao.png');
+    .image-group img {
+      object-fit: cover;
+    }
   }
 
   &.project-portfolio {
-    background-color: rgb(240, 230, 210);
+    .image-group {
+      background-color: $portfolio-beige;
 
-    .title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-family: 'Editorial', sans-serif;
-      font-size: clamp(24px, 6vw, 80px);
-      text-transform: uppercase;
-      transform: translate(-50%, -50%);
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: 'Editorial', sans-serif;
+        font-size: clamp(24px, 6vw, 80px);
+        text-transform: uppercase;
+        transform: translate(-50%, -50%);
+      }
     }
 
     .skills-group {
       top: -56px;
     }
-  }
-
-  &.project-harim {
-    background-color: red;
-    background-image: url('assets/images/img_harim.svg');
-    background-size: 50%;
   }
 }

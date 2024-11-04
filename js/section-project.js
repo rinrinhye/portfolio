@@ -81,20 +81,30 @@ ScrollTrigger.create({
 
 //projects
 
-projects.forEach((project) => {
-  project.addEventListener('mouseenter', () => {
-    gsap.to(project, {
-      scale: 1.02,
-      duration: 0.3,
-      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
-    });
-  });
+function projectHoverIn() {
+  if (innerWidth < 1024) return;
 
-  project.addEventListener('mouseleave', () => {
-    gsap.to(project, {
-      scale: 1,
-      duration: 0.3,
-      boxShadow: 'none',
-    });
+  gsap.to(this, {
+    scale: 1.02,
+    duration: 0.3,
+    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
   });
+}
+
+function projectHoverOut() {
+  if (innerWidth < 1024) return;
+
+  gsap.to(this, {
+    scale: 1,
+    duration: 0.3,
+    boxShadow: 'none',
+  });
+}
+
+projects.forEach((project) => {
+  const imageGroup = project.querySelector('.image-group');
+
+  imageGroup.addEventListener('mouseenter', projectHoverIn);
+
+  imageGroup.addEventListener('mouseleave', projectHoverOut);
 });

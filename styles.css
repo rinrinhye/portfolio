@@ -615,31 +615,36 @@ body {
   }
 }
 .project {
-  width: clamp(200px, 75vw, 800px);
-  height: clamp(200px, 60vw, 600px);
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s, transform 0.3s;
 }
 .project .wrap {
   position: relative;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: 100%;
-  gap: 20px;
+  gap: 12px;
 }
 .project .skills-group {
-  position: absolute;
-  top: -32px;
-  left: 0;
   display: flex;
   flex-wrap: wrap-reverse;
   max-width: clamp(200px, 75vw, 800px);
   gap: 6px;
+}
+.project .image-group {
+  position: relative;
+  width: clamp(200px, 75vw, 800px);
+  height: clamp(200px, 60vw, 600px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+.project .image-group img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
 }
 .project .skill {
   padding: clamp(4px, 1vw, 6px) clamp(6px, 2vw, 12px);
@@ -652,10 +657,8 @@ body {
   border-radius: 4px;
 }
 .project .link-group {
-  position: absolute;
-  right: 0;
-  bottom: -50px;
   display: flex;
+  align-self: flex-end;
 }
 .project .link-group .link {
   padding: 10px 20px;
@@ -664,17 +667,23 @@ body {
   color: #171010;
   text-transform: uppercase;
 }
-.project.project-ohou {
-  background-image: url("assets/images/img_ohou.jpg");
-  background-size: cover;
+.project.project-harim .image-group {
+  background-color: #f00;
 }
-.project.project-kakao {
-  background-image: url("assets/images/img_kakao.png");
+.project.project-harim .image-group img {
+  width: 50%;
+  height: 50%;
 }
-.project.project-portfolio {
-  background-color: rgb(240, 230, 210);
+.project.project-ohou .image-group img {
+  object-fit: cover;
 }
-.project.project-portfolio .title {
+.project.project-kakao .image-group img {
+  object-fit: cover;
+}
+.project.project-portfolio .image-group {
+  background-color: #ebe3d7;
+}
+.project.project-portfolio .image-group .title {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -685,9 +694,4 @@ body {
 }
 .project.project-portfolio .skills-group {
   top: -56px;
-}
-.project.project-harim {
-  background-color: red;
-  background-image: url("assets/images/img_harim.svg");
-  background-size: 50%;
 }/*# sourceMappingURL=styles.css.map */

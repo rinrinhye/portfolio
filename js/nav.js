@@ -33,22 +33,30 @@ links.forEach((link) => {
 
 ///// hover 효과
 
+function navHoverIn() {
+  if (innerWidth < 1024) return;
+
+  gsap.to(this.querySelector('.line'), {
+    scaleX: 1,
+    transformOrigin: 'left',
+    duration: 0.3,
+  });
+}
+
+function navHoverOut() {
+  if (innerWidth < 1024) return;
+
+  gsap.to(this.querySelector('.line'), {
+    scaleX: 0,
+    transformOrigin: 'right',
+    duration: 0.3,
+  });
+}
+
 gsap.utils.toArray('.nav div').forEach((div) => {
   if (div.classList.contains('home')) return;
 
-  div.addEventListener('mouseenter', () => {
-    gsap.to(div.querySelector('.line'), {
-      scaleX: 1,
-      transformOrigin: 'left',
-      duration: 0.3,
-    });
-  });
+  div.addEventListener('mouseenter', navHoverIn);
 
-  div.addEventListener('mouseleave', () => {
-    gsap.to(div.querySelector('.line'), {
-      scaleX: 0,
-      transformOrigin: 'right',
-      duration: 0.3,
-    });
-  });
+  div.addEventListener('mouseleave', navHoverOut);
 });

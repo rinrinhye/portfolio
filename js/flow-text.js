@@ -13,30 +13,17 @@ diagonalTextGroup.forEach((group) => {
   group.appendChild(cloneFlowWrap);
 });
 
-const rightFlowAnimation = gsap.timeline({
+const options = {
   repeat: -1,
   defaults: {
     ease: 'none',
   },
-});
-const cloneRightFlowAnimation = gsap.timeline({
-  repeat: -1,
-  defaults: {
-    ease: 'none',
-  },
-});
-const leftFlowAnimation = gsap.timeline({
-  repeat: -1,
-  defaults: {
-    ease: 'none',
-  },
-});
-const cloneLeftFlowAnimation = gsap.timeline({
-  repeat: -1,
-  defaults: {
-    ease: 'none',
-  },
-});
+};
+
+const rightFlowAnimation = gsap.timeline(options);
+const cloneRightFlowAnimation = gsap.timeline(options);
+const leftFlowAnimation = gsap.timeline(options);
+const cloneLeftFlowAnimation = gsap.timeline(options);
 
 diagonalTextLineWrap.forEach((line) => {
   if (line.classList.contains('left')) {
