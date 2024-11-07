@@ -1,0 +1,20 @@
+[33m018cb36[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD~
+[33med8968c[m HEAD@{1}: reset: moving to HEAD~
+[33m5ed069e[m HEAD@{2}: commit: fouc 방지, ing 주석처리
+[33med8968c[m HEAD@{3}: reset: moving to HEAD~
+[33m74352c5[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{4}: commit: fouc 방지
+[33med8968c[m HEAD@{5}: commit: project 구조 변경, 1024px 이하 hover 제거, section-visual autoAlpha로 변경, 구역 별 h.sr-only 추가
+[33m018cb36[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{6}: commit: skills-group max-width 설정
+[33m3cfe851[m HEAD@{7}: commit: smooth-scrollbar 가로 스크롤제거, 프로젝트 text 순서 변경
+[33ma38f8d4[m HEAD@{8}: reset: moving to HEAD~
+[33mde3bf90[m HEAD@{9}: commit: smooth-scrollbar 가로스크롤 제거
+[33ma38f8d4[m HEAD@{10}: reset: moving to HEAD~
+[33mf6dae8c[m HEAD@{11}: commit: smooth-scrollbar 가로스크롤 없애기
+[33ma38f8d4[m HEAD@{12}: commit: #container - overflow-x : hidden
+[33m6b150ff[m HEAD@{13}: commit: 모바일 가로스크롤 제거, markers 수정
+[33m8904222[m HEAD@{14}: reset: moving to HEAD~
+[33m1265f17[m HEAD@{15}: commit: markers 수정, 모바일 가로스크롤 수정
+[33m8904222[m HEAD@{16}: reset: moving to HEAD~
+[33mb65cb9a[m HEAD@{17}: commit: 모바일에서 x 스크롤, markers 수정
+[33m8904222[m HEAD@{18}: commit: 베이스 완성~!!!
+[33mdb1a700[m HEAD@{19}: commit (initial): reset, grid sytstem, 반응형, scss-lint.yml 파일 추가

@@ -10,6 +10,13 @@
     height: 100%;
   }
 
+  //fouc 방지
+  .top,
+  .bottom {
+    opacity: 0;
+    visibility: 0;
+  }
+
   .visual-text {
     display: flex;
     flex-direction: column;

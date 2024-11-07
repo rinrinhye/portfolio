@@ -63,16 +63,9 @@ ScrollTrigger.create({
       flowAniReverse();
     }
 
-    let index = 0;
+    const maxLength = projects.length - 1;
 
-    if (0 <= progress && progress < 0.3) {
-    } else if (0.3 <= progress && progress < 0.6) {
-      index = 1;
-    } else if (0.6 <= progress && progress < 0.9) {
-      index = 2;
-    } else if (0.9 <= progress && progress <= 1) {
-      index = 3;
-    }
+    let index = Math.floor(progress * maxLength);
 
     textAnimation(index).play();
     verticalTextAnimation(index);
@@ -84,7 +77,9 @@ ScrollTrigger.create({
 function projectHoverIn() {
   if (innerWidth < 1024) return;
 
-  gsap.to(this, {
+  const imageGroup = this.querySelector('.image-group');
+
+  gsap.to(imageGroup, {
     scale: 1.02,
     duration: 0.3,
     boxShadow: '0 4px 15px rgba(0, 0, 0, 0.5)',
@@ -94,7 +89,9 @@ function projectHoverIn() {
 function projectHoverOut() {
   if (innerWidth < 1024) return;
 
-  gsap.to(this, {
+  const imageGroup = this.querySelector('.image-group');
+
+  gsap.to(imageGroup, {
     scale: 1,
     duration: 0.3,
     boxShadow: 'none',
@@ -102,9 +99,7 @@ function projectHoverOut() {
 }
 
 projects.forEach((project) => {
-  const imageGroup = project.querySelector('.image-group');
+  project.addEventListener('mouseenter', projectHoverIn);
 
-  imageGroup.addEventListener('mouseenter', projectHoverIn);
-
-  imageGroup.addEventListener('mouseleave', projectHoverOut);
+  project.addEventListener('mouseleave', projectHoverOut);
 });
