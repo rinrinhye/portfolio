@@ -64,8 +64,7 @@ ScrollTrigger.create({
     }
 
     const maxLength = projects.length - 1;
-
-    let index = Math.floor(progress * maxLength);
+    const index = Math.floor(progress * maxLength);
 
     textAnimation(index).play();
     verticalTextAnimation(index);
